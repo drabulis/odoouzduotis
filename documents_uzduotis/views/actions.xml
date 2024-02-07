@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="action_document_tree" model="ir.actions.act_window">
+            <field name="name">Dokumentai</field>
+            <field name="res_model">documents_module.document</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="documents_module_document_tree_view"/>
+        </record>
+    </data>
+</odoo>

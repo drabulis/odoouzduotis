@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_document_date_range_form" model="ir.ui.view">
+            <field name="name">document.date_range.form</field>
+            <field name="model">documents_module.document.date_range</field>
+            <field name="arch" type="xml">
+                <form string="Dokumentų Filtravimo Forma">
+                    <group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="print_document_list" string="Print Document List" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_document_date_range_form" model="ir.actions.act_window">
+            <field name="name">Dokumentų Filtravimo Forma</field>
+            <field name="res_model">documents_module.document.date_range</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_document_date_range_form" name="Document Date Range Form" parent="menu_root" sequence="10"/>
+        <menuitem id="menu_document_date_range_action" name="Document Date Range Action" parent="menu_document_date_range_form" action="action_document_date_range_form"/>
+    </data>
+</odoo>

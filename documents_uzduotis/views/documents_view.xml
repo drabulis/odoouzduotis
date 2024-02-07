@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="documents_module_document_tree_view" model="ir.ui.view">
+            <field name="name">Document Tree View</field>
+            <field name="model">documents_module.document</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="documents_module_document_form_view" model="ir.ui.view">
+            <field name="name">Document Form View</field>
+            <field name="model">documents_module.document</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="company_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
